@@ -1,0 +1,11 @@
+# Ignore Virutal Environment
+mrvenv/
+
+# Pycache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Data
+data
