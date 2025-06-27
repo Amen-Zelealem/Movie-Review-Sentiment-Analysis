@@ -82,7 +82,9 @@ Running the App
 cd app
 python app.py
 ```
-Then visit: http://127.0.0.1:5000
+Then visit: http://127.0.0.1:5000 or 
+
+**You Can Visit the Deployed Version** using https://movie-review-sentiment-analysis-g0du.onrender.com/
 
 ### Requirements
 - Python 3.7+
@@ -112,9 +114,18 @@ Movie-Review-Sentiment-Analysis/
 ├── predict.py                  # Command-line prediction
 ├── train.py                    # Model training script
 ├── imdb_reviews_sample.csv
+├── Procfile
 ├── requirements.txt
 └── README.md
 ```
+
+## **Sample Screenshots**
+![SentimentForm](/screenshots/SentimentForm.png)
+
+---
+
+![Result](/screenshots/Result.png)
+
 
 ### Acknowledgements
 - IMDb dataset (for demonstration purposes)
