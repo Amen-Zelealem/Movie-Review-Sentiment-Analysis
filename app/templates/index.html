@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Movie Review Sentiment Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-200 via-blue-200 to-blue-200 min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-5xl bg-white shadow-2xl rounded-lg p-8">
+        <div class="header">
+            <h1 class="text-2xl"> Movie Review Sentiment Analyzer</h1>
+            <p class="text-lg">Type your movie review below!</p>
+        </div>
+
+        <form action="/predict" method="post" class="space-y-6">
+            <textarea name="text" rows="6" placeholder="Type your movie review here..." class="w-full border border-gray-300 rounded-md shadow-sm px-4 py-3 transition duration-200 ease-in-out focus:ring-2 focus:ring-blue-500 focus:outline-none hover:border-blue-400"></textarea>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50">Analyze Sentiment</button>
+        </form>
+
+        <footer class="text-center text-gray-600 mt-10">
+            <p>© <span id="year"></span> Developed by Amen Zelealem</p>
+            <div>
+                <a href="https://github.com/amen-zelealem" class="text-blue-500 underline" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+                <a href="https://www.linkedin.com/in/amen-zelealem" class="text-blue-500 underline" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

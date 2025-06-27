@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Sentiment Result</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f4f8;
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        background-color: #4a90e2;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-r from-blue-200 via-blue-200 to-blue-200 min-h-screen flex items-center justify-center p-4"
+  >
+    <div class="w-full max-w-5xl bg-white shadow-2xl rounded-lg p-8">
+      <div class="header">
+        <h1 class="text-2xl">Sentiment Analysis Result</h1>
+      </div>
+
+      <div class="mt-4">
+        <p class="text-lg"><strong>Review:</strong> <em>{{ text }}</em></p>
+        <p class="text-lg">
+          <strong>Sentiment:</strong>
+          <span
+            class="text-lg font-semibold {% if prediction == 'positive' %} text-green-600 {% elif prediction == 'negative' %} text-red-600 {% else %} text-gray-600 {% endif %}"
+          >
+            {{ prediction | capitalize }}
+          </span>
+        </p>
+        <p class="text-lg">
+          <strong>Confidence:</strong>
+          <span class="font-medium">{{ confidence }}%</span>
+        </p>
+      </div>
+
+      <br />
+      <a
+        href="/"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+      >
+        Analyze Another Review
+      </a>
+
+      <footer class="text-center text-gray-600 mt-10">
+        <p>© <span id="year"></span> Developed by Amen Zelealem</p>
+        <div>
+          <a
+            href="https://github.com/amen-zelealem"
+            class="text-blue-500 underline"
+            target="_blank"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          |
+          <a
+            href="https://www.linkedin.com/in/amen-zelealem"
+            class="text-blue-500 underline"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i> LinkedIn</a
+          >
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
